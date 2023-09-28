@@ -1,8 +1,6 @@
-# React + Vite
+# Vanity eStore design
+## Using Vite+React/TWCSS/NextUI to bring you a scalable design for your next eShop.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Fully responsive on all breakpoints with a max width of 1536px for modern larger monitors.
+Category interactive image links for a modern feel to the page.
+Demo page for category display to be added. 
