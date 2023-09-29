@@ -32,11 +32,6 @@ export default function NavbarComp() {
             </NavbarContent>
 
             <NavbarContent className="hidden md:flex gap-4" justify="center">
-                <NavbarItem isActive>
-                    <Link href="#" aria-current="page" className="text-lg text-white">
-                        Home
-                    </Link>
-                </NavbarItem>
                 <NavbarItem>
                     <Link href="#" className="text-lg text-white">
                         Products

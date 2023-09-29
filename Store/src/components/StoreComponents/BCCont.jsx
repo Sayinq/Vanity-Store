@@ -7,14 +7,17 @@ const BCCont = () => {
         <BannerCard 
             imageSrc="./src/assets/images/banner-backgrounds/grid-banner-black.png"
             bannerText="Banner"
+            secondImage="./src/assets/images/vanity_icon.png"
         />
         <BannerCard 
             imageSrc="./src/assets/images/banner-backgrounds/grid-banner-black.png"
             bannerText="Banner"
+            secondImage="./src/assets/images/vanity_icon.png"
         />
         <BannerCard 
             imageSrc="./src/assets/images/banner-backgrounds/grid-banner-black.png"
             bannerText="Banner"
+            secondImage="./src/assets/images/vanity_icon.png"
         />
     </div>
   )
