@@ -38,8 +38,7 @@ const Home = () => {
         </div>
 
         {/* Categories Section */}
-        <section id="categories-section" className="flex w-screen h-auto lg:pb-24 pt-12 pb-6 m-0 items-center justify-center">
-4       
+        <section id="categories-section" className="flex w-screen h-auto lg:pb-24 pt-12 pb-6 m-0 items-center justify-center">       
             <div id="categories-wrapper" className="flex w-full lg:flex-nowrap sm:flex-row sm:flex-wrap flex-col sm:items-stretch items-center 2xl:justify-center lg:justify-start justify-center max-w-[1536px]">
 
                 {/* Left side including Categories cards */}
