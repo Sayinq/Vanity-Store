@@ -22,3 +22,7 @@
   src:
     url("./assets/fonts/lufga-regular.otf") format("opentype");
 }
+
+.accordion {
+  background: black;
+}

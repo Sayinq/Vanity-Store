@@ -10,6 +10,8 @@ import {
     Avatar,
     Link, Button } from '@nextui-org/react';
 
+import { Link as RouterLink } from 'react-router-dom'; 
+
 import LoginModal from './LoginModal';
 {/* Import Logo When Made */}
 
@@ -24,11 +26,14 @@ export default function NavbarComp() {
 
     return (
         <Navbar onMenuOpenChange={setIsMenuOpen} isBlurred={false} className="absolute top-0 bg-black/75 h-28 text-white">
+            
             <NavbarContent>
+                <RouterLink to="/" className="text-white cursor-pointer">
                 <NavbarBrand>
                     <img src="../src/assets/images/vanity_icon.png" className="w-20 h-20 sm:-translate-x-4 -translate-x-2 hidden sm:flex" />
                     <p className="font-bold sm:text-4xl text-2xl ">Vanity</p>
                 </NavbarBrand>
+                </RouterLink>
             </NavbarContent>
 
             <NavbarContent className="hidden md:flex gap-4" justify="center">
@@ -38,9 +43,9 @@ export default function NavbarComp() {
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href="#" className="text-lg text-white">
+                    <RouterLink to="/faq" className="text-lg text-white">
                         FAQ
-                    </Link>
+                    </RouterLink>
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent className="" justify="end">
