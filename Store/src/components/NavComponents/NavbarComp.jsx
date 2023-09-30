@@ -7,8 +7,12 @@ import {
     NavbarBrand, 
     NavbarContent, 
     NavbarItem, 
-    Avatar,
-    Link, Button } from '@nextui-org/react';
+    Link,
+    Button,
+    Dropdown, 
+    DropdownTrigger, 
+    DropdownMenu, 
+    DropdownItem } from '@nextui-org/react';
 
 import { Link as RouterLink } from 'react-router-dom'; 
 
@@ -55,9 +59,26 @@ export default function NavbarComp() {
 
                 </NavbarItem>
                 <NavbarItem>
-                    <Button isIconOnly className="flex items-center justify-center text-2xl rounded-full text-white bg-[#131313] hover:bg-white hover:text-black  border-none">
-                        <ion-icon name="globe-outline"></ion-icon>
-                    </Button>
+
+                    <Dropdown placement="bottom-end" className="bg-[#131313] gap-y-4">
+                        <DropdownTrigger>
+                            <Button isIconOnly className="flex items-center justify-center text-2xl rounded-full text-white bg-[#131313] hover:bg-white hover:text-black  border-none">
+                                <ion-icon name="globe-outline"></ion-icon>
+                            </Button>
+                        </DropdownTrigger>
+                        <DropdownMenu aria-label="Language Options" variant="flat">
+                            <DropdownItem key="en" value="en">
+                                English
+                            </DropdownItem>
+                            <DropdownItem key="es" value="es">
+                                Spanish
+                            </DropdownItem>
+                            <DropdownItem key="fr" value="fr">
+                                French
+                            </DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
+
                 </NavbarItem>
                 <NavbarItem>
                     <Button isIconOnly className="flex items-center justify-center text-2xl rounded-full text-white bg-[#131313] hover:bg-white hover:text-black border-none">

@@ -14,11 +14,12 @@ export default function LoginModal() {
         isOpen={isOpen} 
         onOpenChange={onOpenChange}
         placement="center"
+        className="bg-[#131313]"
       >
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">Log in</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1 text-white font-bold">Log in</ModalHeader>
               <ModalBody>
                 <Input
                   autoFocus
@@ -38,7 +39,7 @@ export default function LoginModal() {
                       label: "text-small",
                     }}
                   >
-                    Remember me
+                    <span className="text-sm text-white">Remember me</span>
                   </Checkbox>
                   <Link color="primary" href="#" size="sm">
                     Forgot password?
@@ -49,7 +50,7 @@ export default function LoginModal() {
                 <Button color="danger" variant="flat" onPress={onClose}>
                   Close
                 </Button>
-                <Button color="primary" onPress={onClose}>
+                <Button color="success" onPress={onClose}>
                   Sign in
                 </Button>
               </ModalFooter>

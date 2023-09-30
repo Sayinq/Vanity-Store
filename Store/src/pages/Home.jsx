@@ -9,10 +9,11 @@ import BundlesCard from '../components/StoreComponents/BundlesCard';
 import Contributors from '../components/LowerComponents/Contributors';
 import QLCont from '../components/LowerComponents/QLCont';
 import Contact from '../components/LowerComponents/Contact';
+import Footer from '../components/LowerComponents/Footer';
 
 const Home = () => {
   return (
-    <main className="w-screen h-max bg-black">
+    <main className="w-screen h-max bg-black transition-all ease-in-out">
 
         {/* Navbar Component */}
         <NavbarComp />
@@ -60,6 +61,7 @@ const Home = () => {
                 </div>
             </div>
         </section>
+        <Footer />
     </main>
   )
 }

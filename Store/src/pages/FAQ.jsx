@@ -5,6 +5,9 @@ import FAQAccordion from '../components/FAQComponents/FAQAccordion';
 import { Image } from '@nextui-org/react';
 import Footer from '../components/LowerComponents/Footer';
 
+{/* Import Framer Motion and begin making DOMContentLoaded animations */}
+{/* React page transition on route change */}
+
 const FAQ = () => {
   return (
     <main className="w-screen h-max z-10">
