@@ -25,7 +25,7 @@ export default function NavbarComp() {
     const navmenuItems = [
         "Home",
         "Products",
-        "Misc"
+        "FAQ"
     ];
 
     return (
@@ -42,9 +42,9 @@ export default function NavbarComp() {
 
             <NavbarContent className="hidden md:flex gap-4" justify="center">
                 <NavbarItem>
-                    <Link href="#" className="text-lg text-white">
+                    <RouterLink to="/category/products" className="text-lg text-white">
                         Products
-                    </Link>
+                    </RouterLink>
                 </NavbarItem>
                 <NavbarItem>
                     <RouterLink to="/faq" className="text-lg text-white">
@@ -89,16 +89,15 @@ export default function NavbarComp() {
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                     className="border-none md:hidden flex"
                 />
-                <NavbarMenu>
+                <NavbarMenu className="flex absolute bg-[#131313] items-center justify-center">
                 {navmenuItems.map((item, index) => (
                 <NavbarMenuItem key={`${item}-${index}`}>
                     <Link
                     color={
                         index === 2 ? "primary" : index === navmenuItems.length - 1 ? "danger" : "foreground"
                     }
-                    className="flex w-full justify-center"
+                    className="flex w-full justify-center text-3xl font-bold text-white p-4"
                     href="#"
-                    size="lg"
                     >
                     {item}
                     </Link>

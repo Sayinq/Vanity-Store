@@ -22,7 +22,7 @@ const useFadeInAnimation = (threshold = 0.25) => {
               {
                 opacity: 1,
                 y: 0, // Final y position
-                duration: 0.5,
+                duration: 0.75,
                 ease: 'power2.inOut',
               }
             );

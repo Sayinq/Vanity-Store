@@ -1,5 +1,4 @@
 import React from 'react';
-import NavbarComp from '../components/NavComponents/NavbarComp';
 import '../../src/index.css';
 import headervideo from '../assets/images/5pc.mp4';
 import BCCont from '../components/StoreComponents/BCCont';
@@ -16,8 +15,6 @@ const Home = () => {
   return (
     <main className="w-screen h-max bg-black transition-all ease-in-out">
         <AnimatePresence>
-        {/* Navbar Component */}
-        <NavbarComp />
 
         {/* Hero Section */}
         <section id="hero-section" className="w-screen h-[620px] relative overflow-hidden">

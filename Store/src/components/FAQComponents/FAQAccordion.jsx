@@ -1,9 +1,9 @@
 import React from 'react'
 import { Accordion, AccordionItem } from '@nextui-org/react';
 import '../../index.css';
-
+import useFadeInAnimation from '../../config/useFadeAnimation';
 export default function FAQAccordion() {
-
+    const { ref, style } = useFadeInAnimation();
 
     const questions = [
       "What is Vanity?",
@@ -42,12 +42,12 @@ export default function FAQAccordion() {
     ];
   
     return (
-      <Accordion selectionMode="multiple" variant="splitted">
+      <Accordion selectionMode="multiple" variant="splitted" ref={ref} style={style}>
         {questions.map((question, index) => (
           <AccordionItem
             key={index}
             title={question}
-            className="text-zinc-700 py-4 sm:w-full w-[375px]"
+            className="text-zinc-700 py-6 sm:w-full w-[375px] mb-4"
             indicator={<ion-icon name="chevron-back-outline"></ion-icon>}
           >
             {answers[index]}

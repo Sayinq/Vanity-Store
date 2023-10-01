@@ -1,4 +1,5 @@
 import React from "react";
+import userImage from '../../assets/images/users/user-image.jpg';
 
 import {Avatar, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Checkbox, Input, Link} from "@nextui-org/react";
 
@@ -7,8 +8,8 @@ export default function LoginModal() {
 
   return (
     <>
-      <Button onPress={onOpen} className="flex w-fit h-fit bg-transparent translate-x-4 border-none">
-        <Avatar src="../src/assets/images/vanity_icon.png" className="w-10 h-10"/>
+      <Button onPress={onOpen} className="flex items-center justify-center w-fit h-fit bg-transparent translate-x-4 border-none">
+        <Avatar src={ userImage } className="w-10 h-10"/>
       </Button>
       <Modal 
         isOpen={isOpen} 

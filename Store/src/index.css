@@ -27,6 +27,10 @@
   background: black;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .slide-in {
   position: fixed;
   top: 0;
