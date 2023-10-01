@@ -4,6 +4,7 @@ import '../../src/index.css';
 import FAQAccordion from '../components/FAQComponents/FAQAccordion';
 import { Image } from '@nextui-org/react';
 import Footer from '../components/LowerComponents/Footer';
+import Transition from '../config/transition';
 
 {/* Import Framer Motion and begin making DOMContentLoaded animations */}
 {/* React page transition on route change */}
@@ -22,7 +23,7 @@ const FAQ = () => {
             </div>
         </section>
 
-        <section id="faq-section" className="flex w-screen h-max lg:pb-24 pt-12 pb-6 m-0 items-center justify-center lg:px-20 bg-black">       
+        <section id="faq-section" className="flex w-screen h-max lg:pb-24 pt-12 pb-6 m-0 items-center justify-center lg:px-20 bg-white">       
             <div id="faq-wrapper" className="flex w-full lg:flex-nowrap sm:flex-row sm:flex-wrap flex-col sm:items-stretch items-center lg:justify-start justify-center max-w-[1536px]">
 
                 {/* Left side of faq */}
@@ -62,4 +63,4 @@ const FAQ = () => {
   )
 }
 
-export default FAQ
+export default Transition(FAQ);

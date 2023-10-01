@@ -10,22 +10,26 @@ import Contributors from '../components/LowerComponents/Contributors';
 import QLCont from '../components/LowerComponents/QLCont';
 import Contact from '../components/LowerComponents/Contact';
 import Footer from '../components/LowerComponents/Footer';
+import Transition from '../config/transition';
+import '../config/motion';
+import { fadeAnimation, slideAnimation, headContainerAnimation } from  '../config/motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Home = () => {
   return (
     <main className="w-screen h-max bg-black transition-all ease-in-out">
-
+        <AnimatePresence>
         {/* Navbar Component */}
         <NavbarComp />
 
         {/* Hero Section */}
         <section id="hero-section" className="w-screen h-[620px] relative overflow-hidden">
-            <div className="flex flex-col items-center justify-center absolute top-0 w-full h-full max-h-[720px] text-white gap-y-4 z-30 sm:mt-0 mt-8">
+            <motion.div className="flex flex-col items-center justify-center absolute top-0 w-full h-full max-h-[720px] text-white gap-y-4 z-30 sm:mt-0 mt-8" {...fadeAnimation}>
                 <h1 className="2xl:text-7xl text-5xl font-bold uppercase drop-shadow-lg">Featured Item</h1>
                 <h5 className="text-lg text-center tracking-wide max-w-[600px] text-slate-400 px-12 drop-shadow-md">
                 Your featured item description, something to add some initiative to click and explore for the user.
                 </h5>
-            </div>
+            </motion.div>
             <video autoPlay loop muted id="bg-video" className="absolute top-0 object-cover w-full h-full max-h-[720px] z-10">
             <source src={headervideo} type="video/mp4" />
             </video>
@@ -34,9 +38,9 @@ const Home = () => {
         </section>
 
         {/* Button Cards for head of page */}
-        <div id="store-header-buttons" className="flex w-screen justify-center pt-12">
+        <motion.div id="store-header-buttons" className="flex w-screen justify-center pt-12" {...slideAnimation('up')}>
             <BCCont />
-        </div>
+        </motion.div>
 
         {/* Categories Section */}
         <section id="categories-section" className="flex w-screen h-auto lg:pb-24 pt-12 pb-6 m-0 items-center justify-center">       
@@ -62,8 +66,9 @@ const Home = () => {
             </div>
         </section>
         <Footer />
+        </AnimatePresence>
     </main>
   )
 }
 
-export default Home
+export default Transition(Home);

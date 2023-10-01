@@ -4,7 +4,7 @@ import {Image} from '@nextui-org/react';
 function BannerCard({ imageSrc, bannerText, secondImage }) {
   return (
     <div className="flex lg:flex-row w-full md:max-w-full h-fit items-center justify-center text-center cursor-pointer z-10 py-3">
-        <Image isZoomed isBlurred 
+        <Image isZoomed 
         src={imageSrc} 
         alt="bannerCard" 
         className="w-screen 2xl:w-[480px] xl:w-[375px] lg:w-[325px] lg:h-[175px] sm:h-[225px] h-[150px] max-h-[300px] rounded-lg shadow-md z-10"/>
