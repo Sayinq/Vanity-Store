@@ -3,6 +3,8 @@ import { Accordion, AccordionItem } from '@nextui-org/react';
 import '../../index.css';
 
 export default function FAQAccordion() {
+
+
     const questions = [
       "What is Vanity?",
       "How can I customize my profile?",

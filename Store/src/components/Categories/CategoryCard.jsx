@@ -1,9 +1,14 @@
 import React from 'react'
 import {Image} from '@nextui-org/react';
+import useFadeInAnimation from '../../config/useFadeAnimation';
 
 function CategoryCard({ imageSrc, categoryText }) {
+  const { ref, style } = useFadeInAnimation();
   return (
-    <div className="flex max-w-full w-fit h-fit items-end justify-center cursor-pointer z-10 lg:p-2 md:py-0 py-4">
+    <div
+      ref={ref} 
+      style={style}
+      className="flex max-w-full w-fit h-fit items-end justify-center cursor-pointer z-10 lg:p-2 md:py-0 py-4">
         <Image isZoomed isBlurred 
         src={imageSrc} 
         alt="CategoryCard" 

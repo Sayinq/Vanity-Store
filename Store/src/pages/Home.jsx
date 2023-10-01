@@ -2,18 +2,15 @@ import React from 'react';
 import NavbarComp from '../components/NavComponents/NavbarComp';
 import '../../src/index.css';
 import headervideo from '../assets/images/5pc.mp4';
-import payments_accepted from '../assets/images/payments_accepted.png';
 import BCCont from '../components/StoreComponents/BCCont';
 import CCCont from '../components/Categories/CCCont'
 import BundlesCard from '../components/StoreComponents/BundlesCard';
-import Contributors from '../components/LowerComponents/Contributors';
-import QLCont from '../components/LowerComponents/QLCont';
-import Contact from '../components/LowerComponents/Contact';
 import Footer from '../components/LowerComponents/Footer';
 import Transition from '../config/transition';
 import '../config/motion';
 import { fadeAnimation, slideAnimation, headContainerAnimation } from  '../config/motion';
 import { motion, AnimatePresence } from 'framer-motion';
+import CategoriesRight from '../components/Categories/CategoriesRight';
 
 const Home = () => {
   return (
@@ -53,16 +50,7 @@ const Home = () => {
                 </div>
 
                 {/* Right side with avatars and misc cards. */}
-                <div id="categories-right" className="flex w-full xl:max-w-[30%] lg:max-w-[25%] md:w-fit max-w-[900px] md:h-fit h-full items-center lg:py-0 md:py-4">
-                    <div id="wrapper" className="flex flex-wrap w-full h-fit items-center justify-center text-center cursor-pointer z-10 px-4">
-                        <Contributors />
-                        <QLCont />
-                        <div id="category-payments" className="flex justify-center items-center bg-[#131313] w-full h-fit p-4 rounded-lg mb-4">
-                            <img src={payments_accepted} className="p-2" />
-                        </div>
-                        <Contact />
-                    </div>
-                </div>
+                <CategoriesRight />
             </div>
         </section>
         <Footer />
