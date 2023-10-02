@@ -2,9 +2,10 @@ import React from 'react';
 import '../../src/index.css';
 import FAQAccordion from '../components/FAQComponents/FAQAccordion';
 import { Image } from '@nextui-org/react';
+import headerVideo from '../assets/images/multiclip.mp4';
 import Footer from '../components/LowerComponents/Footer';
 import Transition from '../config/transition';
-import { slideAnimation } from '../config/motion';
+import { slideAnimation, fadeAnimation } from '../config/motion';
 import { motion, AnimatePresence } from 'framer-motion';
 
 {/* Import Framer Motion and begin making DOMContentLoaded animations */}
@@ -13,13 +14,18 @@ const FAQ = () => {
   return (
     <main className="w-screen h-max z-10">
 
-        <section id="hero-section" className="w-screen h-[620px] relative overflow-hidden bg-[#131313]">
-            <div className="flex flex-col items-center justify-center absolute top-0 w-full h-full max-h-[720px] text-white gap-y-4 z-30 sm:mt-0 mt-8">
+<section id="hero-section" className="w-screen h-[620px] relative overflow-hidden">
+            <motion.div className="flex flex-col items-center justify-center absolute top-0 w-full h-full max-h-[720px] text-white gap-y-4 z-30 sm:mt-0 mt-8" {...fadeAnimation}>
                 <h1 className="2xl:text-7xl text-5xl font-bold uppercase drop-shadow-lg">FAQ</h1>
                 <h5 className="text-lg text-center tracking-wide max-w-[600px] text-slate-400 px-12 drop-shadow-md">
-                Your FAQ description, something to clear whitespace with helpful dialogue.
+                Your FAQ description, something to add helpful insight to the user.
                 </h5>
-            </div>
+            </motion.div>
+            <video autoPlay loop muted id="bg-video" className="absolute top-0 object-cover w-full h-full max-h-[720px] z-10">
+            <source src={headerVideo} type="video/mp4" />
+            </video>
+            <div id="bg-video-gradient" 
+                className="absolute top-0 object-cover w-full h-full max-h-[720px] z-20 bg-gradient-to-t from-neutral-900/75 to-gray-900/5"></div>
         </section>
 
         <section id="faq-section" className="flex w-screen h-max lg:pb-24 pt-12 pb-6 m-0 items-center justify-center lg:px-20 bg-black">       
