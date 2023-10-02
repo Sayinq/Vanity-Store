@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import FAQ from './pages/FAQ'
 import Products from './pages/Products';
 import NavbarComp from './components/NavComponents/NavbarComp';
+import Footer from './components/LowerComponents/Footer';
 import { AnimatePresence } from 'framer-motion';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/category/products" element={<Products />} />
         </Routes>
       </AnimatePresence>
+      <Footer />
     </>
   )
 }

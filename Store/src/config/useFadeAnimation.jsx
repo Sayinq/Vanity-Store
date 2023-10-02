@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-const useFadeInAnimation = (threshold = 0.25) => {
+const useFadeInAnimation = (threshold = 0.2) => {
   const elementRef = useRef(null);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const useFadeInAnimation = (threshold = 0.25) => {
               {
                 opacity: 1,
                 y: 0, // Final y position
-                duration: 0.75,
+                duration: 0.5,
                 ease: 'power2.inOut',
               }
             );

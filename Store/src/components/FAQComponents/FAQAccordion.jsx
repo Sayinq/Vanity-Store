@@ -2,6 +2,7 @@ import React from 'react'
 import { Accordion, AccordionItem } from '@nextui-org/react';
 import '../../index.css';
 import useFadeInAnimation from '../../config/useFadeAnimation';
+
 export default function FAQAccordion() {
     const { ref, style } = useFadeInAnimation();
 

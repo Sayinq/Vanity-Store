@@ -32,14 +32,14 @@ const FAQ = () => {
 
                 {/* Right side of faq */}
                 <AnimatePresence>
-                  <motion.div id="faq-right" className="flex w-full xl:max-w-[50%] lg:max-w-[35%] md:w-fit max-w-[900px] lg:h-screen md:h-max lg:py-0 pb-4" {...slideAnimation('right')}>
+                  <motion.div id="faq-right" className="flex w-full xl:max-w-[50%] lg:max-w-[35%] md:w-fit max-w-[900px] lg:py-0 pb-4" {...slideAnimation('right')}>
                       <div id="wrapper" className="flex lg:sticky relative top-[20px] flex-wrap w-full h-fit cursor-pointer z-10 px-4 gap-y-2">
                         <div id="sticky-wrapper" className="flex lg:flex-col md:flex-row w-full h-fit items-center justify-center text-center cursor-pointer z-10">
                             <Image isZoomed isBlurred 
                               src="./src/assets/images/banner-backgrounds/grid-banner-black.png" 
                               alt="QuickLinks" 
-                              className="w-screen sticky 2xl:w-full md:w-[345px] h-[150px] rounded-lg shadow-md z-10"/>
-                              <div className="flex flex-row text-white items-center lg:w-[200px] md:w-[250px] sm:w-[550px] w-[275px] justify-between font-bold absolute z-30 uppercase lg:gap-x-0 gap-x-4 lg:text-3xl text-4xl pointer-events-none">
+                              className="w-screen sticky 2xl:w-full h-[150px] rounded-lg shadow-md z-10"/>
+                              <div className="flex flex-row text-white items-center lg:w-[200px] sm:w-[550px] w-[275px] justify-between font-bold absolute z-30 uppercase lg:gap-x-0 gap-x-4 lg:text-3xl text-4xl pointer-events-none">
                                 <h2 className="lg:text-3xl sm:text-4xl text-4xl tracking-wider drop-shadow-md uppercase">Support</h2>
                                 <ion-icon name="arrow-forward-circle"></ion-icon>
                               </div>
@@ -48,8 +48,8 @@ const FAQ = () => {
                             <Image isZoomed isBlurred 
                               src="./src/assets/images/banner-backgrounds/grid-banner-black.png" 
                               alt="QuickLinks" 
-                              className="w-screen sticky 2xl:w-full md:w-[345px] h-[150px] rounded-lg shadow-md z-10"/>
-                              <div className="flex flex-row text-white items-center lg:w-[200px] md:w-[250px] sm:w-[550px] w-[275px] justify-between font-bold absolute z-30 uppercase lg:gap-x-0 gap-x-4 lg:text-3xl text-4xl pointer-events-none">
+                              className="w-screen sticky 2xl:w-full h-[150px] rounded-lg shadow-md z-10"/>
+                              <div className="flex flex-row text-white items-center lg:w-[200px] sm:w-[550px] w-[275px] justify-between font-bold absolute z-30 uppercase lg:gap-x-0 gap-x-4 lg:text-3xl text-4xl pointer-events-none">
                                 <h2 className="lg:text-3xl sm:text-4xl text-4xl tracking-wider drop-shadow-md uppercase">Community</h2>
                                 <ion-icon name="arrow-forward-circle"></ion-icon>
                               </div>
@@ -59,7 +59,6 @@ const FAQ = () => {
                 </AnimatePresence>
             </div>
         </section>
-        <Footer />
     </main>
   )
 }

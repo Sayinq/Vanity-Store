@@ -20,13 +20,11 @@ import LoginModal from './LoginModal';
 {/* Import Logo When Made */}
 
 export default function NavbarComp() {
-    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const navmenuItems = [
-        "Home",
-        "Products",
-        "FAQ"
-    ];
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    }
 
     return (
         <Navbar onMenuOpenChange={setIsMenuOpen} isBlurred={false} className="absolute top-0 bg-black/75 h-28 text-white">
@@ -89,21 +87,35 @@ export default function NavbarComp() {
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                     className="border-none md:hidden flex"
                 />
-                <NavbarMenu className="flex absolute bg-[#131313] items-center justify-center">
-                {navmenuItems.map((item, index) => (
-                <NavbarMenuItem key={`${item}-${index}`}>
-                    <Link
-                    color={
-                        index === 2 ? "primary" : index === navmenuItems.length - 1 ? "danger" : "foreground"
-                    }
-                    className="flex w-full justify-center text-3xl font-bold text-white p-4"
-                    href="#"
-                    >
-                    {item}
-                    </Link>
-                </NavbarMenuItem>
-                ))}
-            </NavbarMenu>
+                <NavbarMenu 
+                    className={`flex absolute top-0 min-h-screen bg-[#131313] items-center justify-center ${isMenuOpen ? 'flex' : 'hidden' }`}
+                    onMenuOpenChange={setIsMenuOpen}    
+                >
+                    <NavbarMenuItem>
+                        <RouterLink 
+                            to="/" 
+                            onClick={closeMenu}
+                            className="flex w-full justify-center text-3xl font-bold text-white p-4 tracking-wider">
+                            Home
+                        </RouterLink>
+                    </NavbarMenuItem>
+                    <NavbarMenuItem>
+                        <RouterLink 
+                            to="/category/products" 
+                            onClick={closeMenu}
+                            className="flex w-full justify-center text-3xl font-bold text-white p-4 tracking-wider">
+                            Products
+                        </RouterLink>
+                    </NavbarMenuItem>
+                    <NavbarMenuItem>
+                        <RouterLink 
+                            to="/faq"
+                            onClick={closeMenu} 
+                            className="flex w-full justify-center text-3xl font-bold text-white p-4 tracking-wider">
+                            FAQ
+                        </RouterLink>
+                    </NavbarMenuItem>
+                </NavbarMenu>
             </NavbarContent>
         </Navbar>
     )

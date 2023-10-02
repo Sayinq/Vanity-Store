@@ -50,7 +50,6 @@ const Home = () => {
                 <CategoriesRight />
             </div>
         </section>
-        <Footer />
         </AnimatePresence>
     </main>
   )
