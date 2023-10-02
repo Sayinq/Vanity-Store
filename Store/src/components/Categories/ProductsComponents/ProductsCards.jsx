@@ -98,14 +98,13 @@ export default function ProductsCards() {
                 <p className="text-zinc-500">${item.price}.99</p>
                 </div>
                 <div className="flex w-full">
-                {/* Display the product button text and open the modal on click */}
+                {/* Render the ProductsModal with selected product */}
                 <ProductsModal />
                 </div>
             </CardFooter>
             </Card>
             
         ))}
-        {/* Render the ProductsModal */}
         </div>
     );
 }

@@ -29,16 +29,16 @@ const FAQ = () => {
         </section>
 
         <section id="faq-section" className="flex w-screen h-max lg:pb-24 pt-12 pb-6 m-0 items-center justify-center lg:px-20 bg-black">       
-            <div id="faq-wrapper" className="flex w-full lg:flex-nowrap sm:flex-row sm:flex-wrap flex-col sm:items-stretch items-center lg:justify-start justify-center max-w-[1536px]">
+            <div id="faq-wrapper" className="flex w-full lg:flex-nowrap sm:flex-row sm:flex-wrap flex-col sm:items-stretch items-center justify-center max-w-[1536px]">
 
                 {/* Left side of faq */}
-                <div id="faq-left" className="flex flex-col justify-center items-center content-center 2xl:w-[50%] xl:w-[70%] lg:max-w-[60%] md:w-[768px] sm:w-[1000px] w-fit">
+                <div id="faq-left" className="flex flex-col justify-center items-center content-center 2xl:w-[80%] xl:w-[70%] lg:max-w-[60%] md:w-[768px] sm:w-[1000px] w-fit">
                     <FAQAccordion />
                 </div>
 
                 {/* Right side of faq */}
                 <AnimatePresence>
-                  <motion.div id="faq-right" className="flex w-full xl:max-w-[50%] lg:max-w-[35%] md:w-fit max-w-[900px] lg:py-0 pb-4" {...slideAnimation('right')}>
+                  <motion.div id="faq-right" className="flex w-full xl:max-w-[20%] lg:max-w-[35%] md:w-fit max-w-[900px] lg:py-0 pb-4" {...slideAnimation('right')}>
                       <div id="wrapper" className="flex lg:sticky relative top-[20px] flex-wrap w-full h-fit cursor-pointer z-10 px-4 gap-y-2">
                         <div id="sticky-wrapper" className="flex lg:flex-col md:flex-row w-full h-fit items-center justify-center text-center cursor-pointer z-10">
                             <Image isZoomed isBlurred 
