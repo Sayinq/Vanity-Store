@@ -1,12 +1,11 @@
 import React from 'react';
-import NavbarComp from '../components/NavComponents/NavbarComp';
 import '../../src/index.css';
 import Transition from '../config/transition';
 import { motion, AnimatePresence } from 'framer-motion';
 import { slideAnimation, fadeAnimation } from '../config/motion';
 import { Image } from '@nextui-org/react';
 import headerVideo from '../assets/images/tarkovclip.mp4';
-import gridBG from '../assets/images/banner-backgrounds/grid-banner-black.png'
+import ProductsCategory from '../components/Categories/ProductsComponents/ProductsCategory';
 import ProductsCards from '../components/Categories/ProductsComponents/ProductsCards';
 
 const Products = () => {
@@ -37,68 +36,9 @@ const Products = () => {
 
                 {/* Right side of faq */}
                 <AnimatePresence>
-                  <motion.div id="faq-right" className="flex w-full xl:max-w-[20%] lg:max-w-[35%] md:w-fit max-w-[900px] lg:py-0 pb-4" {...slideAnimation('right')}>
-                      <div id="wrapper" className="flex lg:sticky relative top-[20px] flex-wrap w-full h-fit cursor-pointer z-10 px-4 gap-y-2">
-                        <div id="sticky-wrapper" className="flex lg:flex-col md:flex-row w-full h-fit items-center justify-center text-center cursor-pointer z-10">
-                            <Image isZoomed isBlurred 
-                              src={gridBG} 
-                              alt="QuickLinks" 
-                              className="w-screen sticky 2xl:w-full h-[100px] rounded-lg shadow-md z-10"/>
-                              <div className="flex flex-row text-white items-center lg:w-[200px] sm:w-[550px] w-[275px] justify-between font-bold absolute z-30 uppercase lg:gap-x-0 gap-x-4 lg:text-3xl text-4xl pointer-events-none">
-                                <h2 className="lg:text-3xl sm:text-4xl text-4xl tracking-wider drop-shadow-md uppercase">Category</h2>
-                                <ion-icon name="arrow-forward-circle"></ion-icon>
-                              </div>
-                        </div>
-                        <div id="sticky-wrapper" className="flex lg:flex-col md:flex-row w-full h-fit items-center justify-center text-center cursor-pointer z-10">
-                            <Image isZoomed isBlurred 
-                              src={gridBG}
-                              alt="QuickLinks" 
-                              className="w-screen sticky 2xl:w-full h-[100px] rounded-lg shadow-md z-10"/>
-                              <div className="flex flex-row text-white items-center lg:w-[200px] sm:w-[550px] w-[275px] justify-between font-bold absolute z-30 uppercase lg:gap-x-0 gap-x-4 lg:text-3xl text-4xl pointer-events-none">
-                                <h2 className="lg:text-3xl sm:text-4xl text-4xl tracking-wider drop-shadow-md uppercase">Category</h2>
-                                <ion-icon name="arrow-forward-circle"></ion-icon>
-                              </div>
-                        </div>
-                        <div id="sticky-wrapper" className="flex lg:flex-col md:flex-row w-full h-fit items-center justify-center text-center cursor-pointer z-10">
-                            <Image isZoomed isBlurred 
-                              src={gridBG}
-                              alt="QuickLinks" 
-                              className="w-screen sticky 2xl:w-full h-[100px] rounded-lg shadow-md z-10"/>
-                              <div className="flex flex-row text-white items-center lg:w-[200px] sm:w-[550px] w-[275px] justify-between font-bold absolute z-30 uppercase lg:gap-x-0 gap-x-4 lg:text-3xl text-4xl pointer-events-none">
-                                <h2 className="lg:text-3xl sm:text-4xl text-4xl tracking-wider drop-shadow-md uppercase">Category</h2>
-                                <ion-icon name="arrow-forward-circle"></ion-icon>
-                              </div>
-                        </div>
-                        <div id="sticky-wrapper" className="flex lg:flex-col md:flex-row w-full h-fit items-center justify-center text-center cursor-pointer z-10">
-                            <Image isZoomed isBlurred 
-                              src={gridBG}
-                              alt="QuickLinks" 
-                              className="w-screen sticky 2xl:w-full h-[100px] rounded-lg shadow-md z-10"/>
-                              <div className="flex flex-row text-white items-center lg:w-[200px] sm:w-[550px] w-[275px] justify-between font-bold absolute z-30 uppercase lg:gap-x-0 gap-x-4 lg:text-3xl text-4xl pointer-events-none">
-                                <h2 className="lg:text-3xl sm:text-4xl text-4xl tracking-wider drop-shadow-md uppercase">Category</h2>
-                                <ion-icon name="arrow-forward-circle"></ion-icon>
-                              </div>
-                        </div>
-                        <div id="sticky-wrapper" className="flex lg:flex-col md:flex-row w-full h-fit items-center justify-center text-center cursor-pointer z-10">
-                            <Image isZoomed isBlurred 
-                              src={gridBG}
-                              alt="QuickLinks" 
-                              className="w-screen sticky 2xl:w-full h-[100px] rounded-lg shadow-md z-10"/>
-                              <div className="flex flex-row text-white items-center lg:w-[200px] sm:w-[550px] w-[275px] justify-between font-bold absolute z-30 uppercase lg:gap-x-0 gap-x-4 lg:text-3xl text-4xl pointer-events-none">
-                                <h2 className="lg:text-3xl sm:text-4xl text-4xl tracking-wider drop-shadow-md uppercase">Category</h2>
-                                <ion-icon name="arrow-forward-circle"></ion-icon>
-                              </div>
-                        </div>
-                        <div id="sticky-wrapper" className="flex lg:flex-col md:flex-row w-full h-fit items-center justify-center text-center cursor-pointer z-10">
-                            <Image isZoomed isBlurred 
-                              src={gridBG}
-                              alt="QuickLinks" 
-                              className="w-screen sticky 2xl:w-full h-[100px] rounded-lg shadow-md z-10"/>
-                              <div className="flex flex-row text-white items-center lg:w-[200px] sm:w-[550px] w-[275px] justify-between font-bold absolute z-30 uppercase lg:gap-x-0 gap-x-4 lg:text-3xl text-4xl pointer-events-none">
-                                <h2 className="lg:text-3xl sm:text-4xl text-4xl tracking-wider drop-shadow-md uppercase">Category</h2>
-                                <ion-icon name="arrow-forward-circle"></ion-icon>
-                              </div>
-                        </div>
+                  <motion.div id="faq-right" className="flex w-full xl:max-w-[20%] lg:max-w-[35%] md:w-fit max-w-[900px] lg:py-0 pb-4 lg:px-0 px-4" {...slideAnimation('right')}>
+                      <div id="wrapper" className="flex lg:sticky relative top-[20px] flex-wrap w-full h-fit cursor-pointer z-10 gap-y-2">
+                        <ProductsCategory />
                       </div>
                   </motion.div>
                 </AnimatePresence>
