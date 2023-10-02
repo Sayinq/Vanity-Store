@@ -1,50 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button } from "@nextui-org/react";
 
-import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
+export default function ProductsModal({ selectedProduct, onCloseModal }) {
+    const [isOpen, setIsOpen] = useState(false);
 
-export default function App() {
-  const {isOpen, onOpen, onOpenChange} = useDisclosure();
+    const openModal = () => {
+        setIsOpen(true);
+    };
 
-  return (
-    <>
-      <Button 
-        onPress={onOpen}
-        className="flex flex-row items-center justify-center bg-green-500 w-full h-auto py-4"
-      >
-            <span>Modal Filler Text</span>
-            <ion-icon name="cart"></ion-icon>
-      </Button>
-      <Modal 
-        isOpen={isOpen} 
-        onOpenChange={onOpenChange}
-        className="bg-[#131313]"    
-    >
-        <ModalContent>
-          {(onClose) => (
-            <>
-              <ModalHeader 
-                className="flex flex-col gap-1 bg-slate-700"> {/* item title here */} </ModalHeader>
-              <ModalBody className="flex w-full h-fit">
-                {/* item Image here */}
-              </ModalBody>
-              <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
-                  Close
-                </Button>
-                <Button 
-                    color="primary" 
-                    onPress={onClose}
-                    className="text-white"
-                >
-                        
-                  {/* Add to cart button here */}
-                </Button>
-              </ModalFooter>
-            </>
-          )}
-        </ModalContent>
-      </Modal>
-    </>
-  );
+    const closeModal = () => {
+        setIsOpen(false);
+        onCloseModal(); // Call the onCloseModal function passed as a prop
+    };
+
+    return (
+        <>
+            <div
+                onClick={openModal}
+                className="flex flex-row items-center justify-center bg-green-500 w-full h-auto py-4 cursor-pointer"
+            >
+                <span>Modal Filler Text</span>
+                <ion-icon name="cart"></ion-icon>
+            </div>
+            <Modal
+                isOpen={isOpen}
+                onOpenChange={closeModal}
+                className="bg-[#131313]"
+            >
+                <ModalContent>
+                    {(onClose) => (
+                        <>
+                            <ModalHeader className="flex flex-col gap-1 bg-slate-700">
+                                {selectedProduct.title}
+                            </ModalHeader>
+                            <ModalBody className="flex w-full h-fit">
+                                <img src={selectedProduct.img} alt={selectedProduct.title} />
+                            </ModalBody>
+                            <ModalFooter>
+                                <div className="mr-2">
+                                    <Button color="danger" variant="light" onPress={closeModal}>
+                                        Close
+                                    </Button>
+                                </div>
+                                <Button
+                                    color="primary"
+                                    onPress={() => {
+                                        // Handle adding the selected product to the cart here
+                                        closeModal();
+                                    }}
+                                    className="text-white"
+                                >
+                                    Add to cart
+                                </Button>
+                            </ModalFooter>
+                        </>
+                    )}
+                </ModalContent>
+            </Modal>
+        </>
+    );
 }
-  
