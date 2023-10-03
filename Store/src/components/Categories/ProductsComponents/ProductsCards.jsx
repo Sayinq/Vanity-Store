@@ -15,64 +15,76 @@ import {
 export default function ProductsCards() {
     const list = [
         {
-            title: "Product Title 1",
+            title: "Voltaic",
             img: 'https://cdn.midjourney.com/8ef1e3ab-8046-4770-8bc6-d399d5224682/0_0.png',
             price: "19",
+            rating: "Mythical",
         },
         {
-            title: "Product Title 2",
+            title: "Onyx",
             img: "https://cdn.midjourney.com/8ef1e3ab-8046-4770-8bc6-d399d5224682/0_0.png",
             price: "14",
+            rating: "Rare",
         },
         {
-            title: "Product Title 3",
+            title: "Nebulus",
             img: "https://cdn.midjourney.com/8ef1e3ab-8046-4770-8bc6-d399d5224682/0_0.png",
             price: "12",
+            rating: "Rare",
         },
         {
-            title: "Product Title 4",
+            title: "Seraph",
             img: "https://cdn.midjourney.com/8ef1e3ab-8046-4770-8bc6-d399d5224682/0_0.png",
             price: "19",
+            rating: "Mythical",
         },
         {
-            title: "Product Title 5",
+            title: "Prophet",
             img: "https://cdn.midjourney.com/8ef1e3ab-8046-4770-8bc6-d399d5224682/0_0.png",
             price: "19",
+            rating: "Mythical",
         },
         {
-            title: "Product Title 6",
+            title: "Zenith",
             img: "https://cdn.midjourney.com/8ef1e3ab-8046-4770-8bc6-d399d5224682/0_0.png",
             price: "9",
+            rating: "Uncommon",
         },
         {
-            title: "Product Title 7",
+            title: "Aegis",
             img: "https://cdn.midjourney.com/8ef1e3ab-8046-4770-8bc6-d399d5224682/0_0.png",
             price: "11",
+            rating: "Rare",
         },
         {
-            title: "Product Title 8",
+            title: "Mirage",
             img: "https://cdn.midjourney.com/8ef1e3ab-8046-4770-8bc6-d399d5224682/0_0.png",
             price: "14",
+            rating: "Rare",
         },
         {
-            title: "Product Title 9",
+            title: "Deceit",
             img: "https://cdn.midjourney.com/8ef1e3ab-8046-4770-8bc6-d399d5224682/0_0.png",
             price: "13",
+            rating: "Rare",
         },
         {
-            title: "Product Title 10",
+            title: "Golem's Arm",
             img: "https://cdn.midjourney.com/8ef1e3ab-8046-4770-8bc6-d399d5224682/0_0.png",
             price: "16",
+            rating: "Legendary",
         },
         {
-            title: "Product Title 11",
+            title: "Moonveil",
             img: "https://cdn.midjourney.com/8ef1e3ab-8046-4770-8bc6-d399d5224682/0_0.png",
             price: "18",
+            rating: "Mythical",
         },
         {
-            title: "Product Title 12",
+            title: "Titanus",
             img: "https://cdn.midjourney.com/8ef1e3ab-8046-4770-8bc6-d399d5224682/0_0.png",
             price: "9",
+            rating: "Uncommon"
         },
     ];
 
@@ -93,13 +105,12 @@ export default function ProductsCards() {
                         <Chip
                             variant="shadow"
                             radius="md"
-                            color="warning"
                             classNames={{
-                                base: "absolute top-5 right-5 z-20 md:p-4 p-6",
+                                base: "absolute bg-gradient-to-r from-violet-600 to-indigo-400 top-5 right-5 z-20 md:p-4 p-6",
                                 content: "drop-shadow shadow-black text-white sm:text-xl text-lg",
                             }}
                         >
-                            <span>${item.price}.99</span>
+                            <span className="lg:text-base">{item.rating}</span>
                          </Chip>
                     <CardBody className="overflow-visible p-2">
                         <Image
@@ -112,18 +123,19 @@ export default function ProductsCards() {
                         />
                     </CardBody>
                     <CardFooter className="flex flex-col w-full text-small gap-y-4 text-white">
-                        <div className="flex flex-row w-full text-small justify-center font-semibold tracking-wide px-4 md:text-base sm:text-xl">
+                        <div className="flex flex-row w-full text-small justify-between font-semibold tracking-wide px-4 md:text-base sm:text-xl">
                             <h1>{item.title}</h1>
+                            <span>${item.price}.99</span>
                         </div>
                         <div className="flex w-full">
                             <Button
                                 onClick={() => handleOpenModal(item)}
-                                color="warning"
+                                color="secondary"
                                 className="flex flex-row items-center justify-center text-white hover:text-black w-full h-auto py-4 cursor-pointer md:text-base sm:text-lg"
                                 radius="lg"
                             >
-                                <span>Add to cart</span>
-                                <ion-icon name="cart"></ion-icon>
+                                <span>Inspect</span>
+                                <ion-icon name="eye"></ion-icon>
                             </Button>
                         </div>
                     </CardFooter>
@@ -138,7 +150,7 @@ export default function ProductsCards() {
                               }}
                         >
                             <ModalContent>
-                                <ModalHeader className="flex flex-col gap-1 bg-slate-700 sm:text-xl">
+                                <ModalHeader className="flex flex-col gap-1 sm:text-xl">
                                     {selectedProduct.title}
                                 </ModalHeader>
                                 <ModalBody className="flex w-full h-fit">

@@ -8,6 +8,8 @@ import headerVideo from '../assets/images/tarkovclip.mp4';
 import ProductsCategory from '../components/Categories/ProductsComponents/ProductsCategory';
 import ProductsCards from '../components/Categories/ProductsComponents/ProductsCards';
 import FilterSelects from '../components/Categories/ProductsComponents/FilterSelects';
+import PriceSlider from '../components/Categories/ProductsComponents/PriceSlider';
+import ProductsSearch from '../components/Categories/ProductsComponents/ProductsSearch';
 
 const Products = () => {
   return (
@@ -28,11 +30,11 @@ const Products = () => {
         </section>
 
         <section id="products-section" className="flex flex-col w-screen h-max lg:pb-24 pt-12 pb-6 m-0 items-center justify-center">
-          <div className="flex xl:flex-row lg:flex-col w-full h-fit py-6 max-w-[1200px] justify-center items-center bg-white mb-12 rounded-lg px-12 gap-4">
-            <FilterSelects />
-            <FilterSelects />
-            <FilterSelects />
-          </div>   
+            <div className="flex lg:flex-row flex-col w-full h-fit py-8 max-w-[1200px] justify-evenly items-center bg-[#131313] mb-12 rounded-lg gap-0 gap-y-8">
+              <ProductsSearch />
+              <FilterSelects />
+              <PriceSlider />
+            </div>   
             <div id="products-wrapper" className="flex w-full lg:flex-nowrap sm:flex-row sm:flex-wrap flex-col sm:items-stretch items-center justify-center max-w-[1536px]">
 
                 {/* Left side of Products */}

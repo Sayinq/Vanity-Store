@@ -48,7 +48,7 @@ export default function FAQAccordion() {
           <AccordionItem
             key={index}
             title={question}
-            className="text-zinc-700 py-6 sm:w-full w-[375px] mb-4"
+            className="text-white text-lg py-6 sm:w-full w-[375px] mb-4"
             indicator={<ion-icon name="chevron-back-outline"></ion-icon>}
           >
             {answers[index]}

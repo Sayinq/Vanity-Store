@@ -45,9 +45,8 @@ const FAQ = () => {
                               src="./src/assets/images/banner-backgrounds/grid-banner-black.png" 
                               alt="QuickLinks" 
                               className="w-screen sticky 2xl:w-full h-[150px] rounded-lg shadow-md z-10"/>
-                              <div className="flex flex-row text-white items-center lg:w-[200px] sm:w-[550px] w-[275px] justify-between font-bold absolute z-30 uppercase lg:gap-x-0 gap-x-4 lg:text-3xl text-4xl pointer-events-none">
+                              <div className="flex flex-row text-white items-center lg:w-[150px] sm:w-[550px] w-[275px] justify-between font-bold absolute z-30 uppercase lg:gap-x-0 gap-x-4 lg:text-3xl text-4xl pointer-events-none">
                                 <h2 className="lg:text-3xl sm:text-4xl text-4xl tracking-wider drop-shadow-md uppercase">Support</h2>
-                                <ion-icon name="arrow-forward-circle"></ion-icon>
                               </div>
                         </div>
                         <div id="sticky-wrapper" className="flex lg:flex-col md:flex-row w-full h-fit items-center justify-center text-center cursor-pointer z-10">
@@ -57,7 +56,6 @@ const FAQ = () => {
                               className="w-screen sticky 2xl:w-full h-[150px] rounded-lg shadow-md z-10"/>
                               <div className="flex flex-row text-white items-center lg:w-[200px] sm:w-[550px] w-[275px] justify-between font-bold absolute z-30 uppercase lg:gap-x-0 gap-x-4 lg:text-3xl text-4xl pointer-events-none">
                                 <h2 className="lg:text-3xl sm:text-4xl text-4xl tracking-wider drop-shadow-md uppercase">Community</h2>
-                                <ion-icon name="arrow-forward-circle"></ion-icon>
                               </div>
                         </div>
                       </div>

@@ -23,7 +23,7 @@ function CategoriesRight() {
           <QLCont />
           <div
             id="category-payments"
-            className="flex justify-center items-center bg-[#131313] w-full h-fit p-4 rounded-lg mb-4"
+            className="flex justify-center items-center bg-[#131313] w-full h-fit p-4 rounded-lg mb-4 cursor-default"
           >
             <img src={payments_accepted} className="p-2" />
           </div>

@@ -13,7 +13,7 @@ export default function FilterSelects() {
         <Select
             items={filters}
             label="Sort by"
-            className="max-w-sm font-bold"
+            className="max-w-[300px] font-bold"
         >
             {(filters) => <SelectItem key={filters.value}>{filters.label}</SelectItem>}
         </Select>
