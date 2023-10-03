@@ -16,7 +16,7 @@ const Contributors = () => {
             <Avatar isBordered src="../src/assets/images/users/pfp3.png" className="w-20 h-20 lg:w-12 lg:h-12 xl:w-20 xl:h-20" />
           </Tooltip>
         </div>
-        <span className="font-bold lg:text-xs">Thanks you for your continuous support.</span>
+        <span className="font-bold xl:text-base lg:text-xs">Thanks you for your continuous support.</span>
     </div>
   )
 }

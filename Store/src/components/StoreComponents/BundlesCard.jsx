@@ -12,7 +12,7 @@ const BundlesCard = () => {
             />
         </div>
         <div id="content-holder" className="flex xl:flex-row xl:gap-x-24 flex-col w-fit h-auto items-center p-4 text-slate-400 pr-8">
-            <h1 className="italic self-start 2xl:text-2xl md:text-xl">Bundles</h1>
+            <h1 className="italic self-start 2xl:text-4xl md:text-xl drop-shadow-md">Bundles</h1>
             <span className="text-[10px] 2xl:text-lg md:text-xs">Save money by buying in bulk.</span>
         </div>
         <Link to="/category/products" className="flex items-center justify-center pl-[10px] h-full w-[50px] md:w-[70px] rounded-r-lg bg-green-500">

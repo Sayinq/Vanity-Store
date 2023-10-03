@@ -6,39 +6,39 @@ const CCCont = () => {
     <div className="flex flex-wrap justify-center w-full md:grid md:grid-cols-3 md:grid-rows-3 h-fit p-4 z-20 md:gap-4 sm:gap-6 lg:py-4 md:py-12">
         <CategoryCard 
             imageSrc="./src/assets/images/category-backgrounds/radialsunrays-purple.png"
-            categoryText="Category"
+            categoryText="Weapons"
         />
         <CategoryCard  
             imageSrc="./src/assets/images/category-backgrounds/radialsunrays-blue.png"
-            categoryText="Category"
+            categoryText="Armor"
         />
         <CategoryCard 
             imageSrc="./src/assets/images/category-backgrounds/radialsunrays-lightblue.png"
-            categoryText="Category"
+            categoryText="Tools"
         />
         <CategoryCard 
             imageSrc="./src/assets/images/category-backgrounds/radialsunrays-yellow.png"
-            categoryText="Category"
+            categoryText="Pets"
         />
         <CategoryCard 
             imageSrc="./src/assets/images/category-backgrounds/radialsunrays-green.png"
-            categoryText="Category"
+            categoryText="Hats"
         />
         <CategoryCard 
             imageSrc="./src/assets/images/category-backgrounds/radialsunrays-reversegreen.png"
-            categoryText="Category"
+            categoryText="Emotes"
         />
         <CategoryCard 
             imageSrc="./src/assets/images/category-backgrounds/radialsunrays-lightgreen.png"
-            categoryText="Category"
+            categoryText="Mounts"
         />
         <CategoryCard 
             imageSrc="./src/assets/images/category-backgrounds/radialsunrays-red.png"
-            categoryText="Category"
+            categoryText="Banners"
         />
         <CategoryCard 
             imageSrc="./src/assets/images/category-backgrounds/radialsunrays-pink.png"
-            categoryText="Category"
+            categoryText="Effects"
         />
     </div>
   )

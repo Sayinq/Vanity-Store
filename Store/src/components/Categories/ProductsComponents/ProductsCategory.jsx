@@ -5,23 +5,39 @@ import gridBG from '../../../assets/images/banner-backgrounds/grid-banner-black.
 const ProductsCategory = () => {
     const list = [
         {
-            category: "Category",
+            category: "Weapons",
             img: gridBG,
         },
         {
-            category: "Category 2",
+            category: "Armor",
             img: gridBG,
         },
         {
-            category: "Category 3",
+            category: "Tools",
             img: gridBG,
         },
         {
-            category: "Category 4",
+            category: "Pets",
             img: gridBG,
         },
         {
-            category: "Category 5",
+            category: "Hats",
+            img: gridBG,
+        },
+        {
+            category: "Emotes",
+            img: gridBG,
+        },
+        {
+            category: "Mounts",
+            img: gridBG,
+        },
+        {
+            category: "Banners",
+            img: gridBG,
+        },
+        {
+            category: "Effects",
             img: gridBG,
         },
     ];
