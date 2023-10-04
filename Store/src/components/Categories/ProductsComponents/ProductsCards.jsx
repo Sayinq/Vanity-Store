@@ -12,6 +12,8 @@ import {
     ModalFooter,
     Chip } from "@nextui-org/react";
 
+import MagicText from './MagicText';
+
 export default function ProductsCards() {
     const list = [
         {
@@ -97,6 +99,7 @@ export default function ProductsCards() {
     const handleCloseModal = () => {
         setSelectedProduct(null);
     };
+    
 
     return (
         <div className="flex flex-wrap w-full h-auto gap-4 items-center justify-center sm:px-4 px-10">
@@ -106,11 +109,11 @@ export default function ProductsCards() {
                             variant="shadow"
                             radius="md"
                             classNames={{
-                                base: "absolute bg-gradient-to-r from-violet-600 to-indigo-400 top-5 right-5 z-20 md:p-4 p-6",
+                                base: "absolute bg-[#27272A] top-5 right-5 z-20 md:p-4 p-6",
                                 content: "drop-shadow shadow-black text-white sm:text-xl text-lg",
                             }}
                         >
-                            <span className="lg:text-base">{item.rating}</span>
+                            <MagicText rating={item.rating} />
                          </Chip>
                     <CardBody className="overflow-visible p-2">
                         <Image
@@ -150,8 +153,18 @@ export default function ProductsCards() {
                               }}
                         >
                             <ModalContent>
-                                <ModalHeader className="flex flex-col gap-1 sm:text-xl">
+                                <ModalHeader className="flex flex-row items-center gap-x-8 sm:text-xl">
                                     {selectedProduct.title}
+                                    <Chip
+                                        variant="shadow"
+                                        radius="md"
+                                        classNames={{
+                                            base: "bg-[#27272A] z-20 md:p-4 p-6",
+                                            content: "drop-shadow shadow-black text-white sm:text-xl text-lg",
+                                        }}
+                                    >
+                                        <MagicText rating={selectedProduct.rating} />
+                                    </Chip>
                                 </ModalHeader>
                                 <ModalBody className="flex w-full h-fit">
                                     <img src={selectedProduct.img} alt={selectedProduct.title} />
