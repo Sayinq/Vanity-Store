@@ -3,7 +3,6 @@ import '../../src/index.css';
 import FAQAccordion from '../components/FAQComponents/FAQAccordion';
 import { Image } from '@nextui-org/react';
 import headerVideo from '../assets/images/multiclip.mp4';
-import Footer from '../components/LowerComponents/Footer';
 import Transition from '../config/transition';
 import { slideAnimation, fadeAnimation } from '../config/motion';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -14,7 +13,7 @@ const FAQ = () => {
   return (
     <main className="w-screen h-max z-10">
 
-<section id="hero-section" className="w-screen h-[620px] relative overflow-hidden">
+        <section id="hero-section" className="w-screen h-[620px] relative overflow-hidden">
             <motion.div className="flex flex-col items-center justify-center absolute top-0 w-full h-full max-h-[720px] text-white gap-y-4 z-30 sm:mt-0 mt-8" {...fadeAnimation}>
                 <h1 className="2xl:text-7xl text-5xl font-bold uppercase drop-shadow-lg">FAQ</h1>
                 <h5 className="text-lg text-center tracking-wide max-w-[600px] text-slate-400 px-12 drop-shadow-md">

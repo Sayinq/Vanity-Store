@@ -8,8 +8,8 @@ export default function LoginModal() {
 
   return (
     <>
-      <Button onPress={onOpen} className="flex items-center justify-center w-fit h-fit bg-transparent translate-x-4 border-none">
-        <Avatar src={ userImage } className="w-10 h-10"/>
+      <Button onPress={onOpen} className="flex items-center justify-center w-fit h-fit bg-transparent translate-x-4 border-none outline-none">
+        <Avatar src={ userImage } className="sm:w-10 sm:h-10 w-8 h-8"/>
       </Button>
       <Modal 
         isOpen={isOpen} 

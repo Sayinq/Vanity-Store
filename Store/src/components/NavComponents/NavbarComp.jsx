@@ -58,7 +58,7 @@ export default function NavbarComp() {
                 </NavbarItem>
                 <NavbarItem>
 
-                    <Dropdown placement="bottom-end" className="bg-[#131313] gap-y-4">
+                    <Dropdown placement="bottom-end" className="bg-[#131313]">
                         <DropdownTrigger>
                             <Button isIconOnly className="flex items-center justify-center text-2xl rounded-full text-white bg-[#131313] hover:bg-white hover:text-black  border-none">
                                 <ion-icon name="globe-outline"></ion-icon>
@@ -79,9 +79,16 @@ export default function NavbarComp() {
 
                 </NavbarItem>
                 <NavbarItem>
-                    <Button isIconOnly className="flex items-center justify-center text-2xl rounded-full text-white bg-[#131313] hover:bg-white hover:text-black border-none">
+                    <Button isIconOnly className="sm:flex items-center justify-center text-2xl rounded-full text-white bg-[#131313] hover:bg-white hover:text-black border-none hidden">
                         <ion-icon name="moon-outline"></ion-icon>
                     </Button>
+                </NavbarItem>
+                <NavbarItem>
+                    <RouterLink to="/checkout/cart">
+                        <Button isIconOnly className="flex items-center justify-center text-2xl rounded-full text-white bg-[#131313] hover:bg-white hover:text-black border-none">
+                            <ion-icon name="bag-handle-outline"></ion-icon>
+                        </Button>
+                    </RouterLink>
                 </NavbarItem>
                 <NavbarMenuToggle 
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
